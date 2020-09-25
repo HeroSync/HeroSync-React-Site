@@ -6,6 +6,8 @@ import LandingPage from './components/LandingPage';
 import Heroes from './components/Heroes';
 import Cards from './components/Cards';
 import Hero from './components/Hero';
+import Blogs from './components/Blogs';
+import Post from './components/Post';
 
 const apolloClient = new ApolloClient({
     uri: 'https://admin.herosync.com/graphql',
@@ -18,9 +20,11 @@ function App() {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={LandingPage} />
-                    <Route path="/heroes" component={Heroes} />
+                    <Route exact path="/heroes" component={Heroes} />
                     <Route path="/hero/:slug" component={Hero} />
-                    <Route path="/cards" component={Cards} />
+                    <Route exact path="/cards" component={Cards} />
+                    <Route exact path="/blog" component={Blogs} />
+                    <Route path="/:slug" component={Post} />
                     {/* <Route path="/card/:slug" component={Card} /> */}
                 </Switch>
             </BrowserRouter>

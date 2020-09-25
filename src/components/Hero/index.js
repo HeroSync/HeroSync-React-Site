@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
+import Spinner from 'react-bootstrap/Spinner';
 import groupBy from 'lodash/groupBy';
 
 const GET_HERO = gql`
@@ -68,7 +69,13 @@ const Hero = ({ match: { url } }) => {
         variables: { url: url },
     });
 
-    if (loading) return 'Loading...';
+    if (loading) return(
+        <PageWrapper mainClassName="h-100 d-flex justify-content-center align-items-center">
+            <Spinner animation="border">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        </PageWrapper>
+    );
     if (error) return `Error! ${error.message}`;
 
     const hero = data.hero.hero_info;

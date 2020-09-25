@@ -3,6 +3,7 @@ import { gql, useQuery } from '@apollo/client';
 import PageWrapper from '../PageWrapper';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Spinner from 'react-bootstrap/Spinner';
 import Hero from '../Hero';
 import styled from 'styled-components';
 
@@ -29,14 +30,22 @@ const GET_ALL_HEROES = gql`
 const HeroesPage = () => {
     const { loading, error, data } = useQuery(GET_ALL_HEROES);
 
-    if (loading) return 'Loading...';
+    const testLoading = false;
+
+    if (loading || testLoading) return(
+        <PageWrapper mainClassName="h-100 d-flex justify-content-center align-items-center">
+            <Spinner animation="border">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        </PageWrapper>
+    );
     if (error) return `Error! ${error.message}`;
 
     const orderedHeroes = data.heroes.edges.slice().sort((h1, h2) => h1.node.hero_info.heroId - h2.node.hero_info.heroId);
 
     return (
-        <PageWrapper mainClassName="h-100 d-flex align-items-center">
-            <HeroWrapper xs={2} md={3} lg={5} className="justify-content-center mx-auto">
+        <PageWrapper mainClassName="h-100 pt-5 d-flex align-items-center">
+            <HeroWrapper xs={2} md={3} lg={5} className="h-100 align-items-center justify-content-center mx-auto">
                 {
                     orderedHeroes.map(hero => {
                         const heroInfo = hero.node.hero_info;
