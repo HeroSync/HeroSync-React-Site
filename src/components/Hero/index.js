@@ -14,6 +14,7 @@ const GET_HERO = gql`
             hero_info {
                 heroId
                 name
+                lore
                 syncRewards {
                     ... on Sync_reward {
                     reward_info {
@@ -84,10 +85,12 @@ const Hero = ({ match: { url } }) => {
 
     return (
         <PageWrapper mainClassName="d-flex align-items-top">
+            <title>HeroSync - {hero.name}</title>
             <HeroWrapper className="mt-5 p-4 text-center w-100 d-flex flex-row justify-content-around align-items-center">
                 <Figure>
                     <Figure.Image width={300} height={300} src={hero.artwork.sourceUrl} alt={hero.name} title={hero.name} className="rounded" />
                     <PageTitle>{hero.name}</PageTitle>
+                    <HeroLore dangerouslySetInnerHTML={{__html: hero.lore}}></HeroLore>
                 </Figure>
                 <SyncRewardsWrapper>
                 {
@@ -138,6 +141,14 @@ const HeroPreviewName = styled.h5`
     text-align: center;
 `;
 
+const HeroLore = styled.p`
+    max-width: 1000px;
+    width: 99%;
+    padding: 0 5px;
+    max-height: 500px;
+    overflow-y: auto;
+`;
+
 const HeroWrapper = styled.div`
     @media (max-width: 900px) {
         flex-direction: column !important;
@@ -168,6 +179,7 @@ const SyncRewardsCol = styled(Col)`
 
     &:hover {
         transform: scale(1.1);
+        background-color: #dad8d8;
     }
 `;
 
