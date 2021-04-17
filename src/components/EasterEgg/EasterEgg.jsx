@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const EasterEgg = () => {
     return (
         <Konami>
-            <BouncingBlob src="./blob-round.gif"></BouncingBlob>
+            <BouncingBlob src="/blob-round.gif"></BouncingBlob>
         </Konami>
     );
 }
@@ -15,7 +15,7 @@ const BouncingBlob = styled.img`
     height: 100px;
     animation: bounce 0.25s infinite alternate;
     -webkit-animation: bounce 0.25s infinite alternate;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
 
