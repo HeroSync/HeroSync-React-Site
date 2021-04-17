@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import { withRouter } from 'react-router';
+import EasterEgg from '../EasterEgg';
 
 const PageWrapper = (props) => {
     const HeaderWithRouter = withRouter(Header);
@@ -13,6 +14,7 @@ const PageWrapper = (props) => {
             <main className={props.mainClassName}>
                 {props.children}
             </main>
+            <EasterEgg />
         </>
     );
 }
