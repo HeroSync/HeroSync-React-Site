@@ -33,7 +33,7 @@ const LandingPage = () => {
                             <Modal.Title>HeroSync Tutorial</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <iframe title="Tutorial Video" className="mr-auto w-100" height="400" src="https://www.youtube-nocookie.com/embed/Rr21LVuMQD0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe title="Tutorial Video" className="mr-auto w-100" height="400" src="https://www.youtube-nocookie.com/embed/YKlMH8RfwpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </Modal.Body>
                     </Modal>
                     <Button href="https://docs.google.com/document/d/e/2PACX-1vT6gn4laTPVDXkc9hLI3jH7jfx7_32gBcQUvkQYhQpunwUZl1S1Qb1odT8ejeX3vwiQ51OJcovIfhRm/pub" target="_blank" size="md" variant="primary text-nowrap">Rulebook</Button>
