@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import styled from 'styled-components';
 
 const Header = (props) => {
     const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const Header = (props) => {
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top" >
-            <Navbar.Brand href="/">HeroSync</Navbar.Brand>
+            <NavSiteTitle href="/">HeroSync</NavSiteTitle>
             <Navbar.Toggle aria-controls="header-nav" />
             <Navbar.Collapse id="header-nav" className="justify-content-end">
                 <Nav fill className="mr-auto" variant="pills" activeKey={props.location.pathname}>
@@ -57,5 +58,11 @@ const Header = (props) => {
         </Navbar>
     );
 }
+
+const NavSiteTitle = styled(Navbar.Brand)`
+    font-family: screaming-neon;
+    font-size: 18pt;
+    letter-spacing: 2pt;
+`;
 
 export default Header;
