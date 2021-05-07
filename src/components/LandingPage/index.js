@@ -29,7 +29,7 @@ const LandingPage = () => {
                 <ButtonGroup vertical={(width < breakpoint ? true : false)}>
                     <Button href="/heroes" size="md" variant="primary">Heroes</Button>
                     <Button href="/blog" variant="primary" size="md">Blog</Button>
-                    <Button size="md" variant="primary text-nowrap" onClick={handleShow}>Tutorial Video</Button>
+                    <Button size="md" variant="primary text-nowrap" onClick={handleShow}>How to Play</Button>
                     <Modal show={show} onHide={handleClose} size="lg" centered>
                         <Modal.Header closeButton>
                             <Modal.Title>How to Play</Modal.Title>
