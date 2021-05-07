@@ -32,7 +32,7 @@ const LandingPage = () => {
                     <Button size="md" variant="primary text-nowrap" onClick={handleShow}>Tutorial Video</Button>
                     <Modal show={show} onHide={handleClose} size="lg" centered>
                         <Modal.Header closeButton>
-                            <Modal.Title>HeroSync Tutorial</Modal.Title>
+                            <Modal.Title>How to Play</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <iframe title="Tutorial Video" className="mr-auto w-100" height="400" src="https://www.youtube-nocookie.com/embed/YKlMH8RfwpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
