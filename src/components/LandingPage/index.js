@@ -23,13 +23,13 @@ const LandingPage = () => {
     return (
         <FullPageContainer className="d-flex flex-column text-justify h-100 w-100 hero justify-content-center align-items-center">
             <SiteTitle className="text-center user-select-none">HeroSync</SiteTitle>
-            <Button href="https://demo.herosync.com" variant="success" size="lg">Play the Alpha!</Button>
+            {/* <Button href="https://demo.herosync.com" variant="success" size="lg">Play the Alpha!</Button> */}
 
             <Container className="text-center mt-3">
                 <ButtonGroup vertical={(width < breakpoint ? true : false)}>
                     <Button href="/heroes" size="md" variant="primary">Heroes</Button>
                     <Button href="/blog" variant="primary" size="md">Blog</Button>
-                    <Button size="md" variant="primary text-nowrap" onClick={handleShow}>How to Play</Button>
+                    <Button size="md" variant="primary text-nowrap" onClick={handleShow}>Tutorial</Button>
                     <Modal show={show} onHide={handleClose} size="lg" centered>
                         <Modal.Header closeButton>
                             <Modal.Title>How to Play</Modal.Title>
@@ -51,7 +51,7 @@ const LandingPage = () => {
                         <a href="https://discord.gg/e6A8SFu" target="_blank" rel="noopener noreferrer">
                             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIGZpbGw9IiM4QzlFRkYiIGlkPSJlbGxpcHNlIiByPSIyNTYiLz48cGF0aCBkPSJNMzcyLjQsMTY4LjdjMCwwLTMzLjMtMjYuMS03Mi43LTI5LjFsLTMuNSw3LjFjMzUuNiw4LjcsNTEuOSwyMS4yLDY5LDM2LjUgIGMtMjkuNC0xNS01OC41LTI5LjEtMTA5LjEtMjkuMXMtNzkuNywxNC4xLTEwOS4xLDI5LjFjMTcuMS0xNS4zLDM2LjUtMjkuMiw2OS0zNi41bC0zLjUtNy4xYy00MS4zLDMuOS03Mi43LDI5LjEtNzIuNywyOS4xICBzLTM3LjIsNTQtNDMuNiwxNjBjMzcuNSw0My4zLDk0LjUsNDMuNiw5NC41LDQzLjZsMTEuOS0xNS45Yy0yMC4yLTctNDMuMS0xOS42LTYyLjgtNDIuM2MyMy41LDE3LjgsNTkuMSwzNi40LDExNi40LDM2LjQgIHM5Mi44LTE4LjUsMTE2LjQtMzYuNGMtMTkuNywyMi43LTQyLjYsMzUuMy02Mi44LDQyLjNsMTEuOSwxNS45YzAsMCw1Ny0wLjMsOTQuNS00My42QzQwOS42LDIyMi43LDM3Mi40LDE2OC43LDM3Mi40LDE2OC43eiAgIE0yMDguNywyOTkuNmMtMTQuMSwwLTI1LjUtMTMtMjUuNS0yOS4xczExLjQtMjkuMSwyNS41LTI5LjFjMTQuMSwwLDI1LjUsMTMsMjUuNSwyOS4xUzIyMi44LDI5OS42LDIwOC43LDI5OS42eiBNMzAzLjMsMjk5LjYgIGMtMTQuMSwwLTI1LjUtMTMtMjUuNS0yOS4xczExLjQtMjkuMSwyNS41LTI5LjFzMjUuNSwxMywyNS41LDI5LjFTMzE3LjMsMjk5LjYsMzAzLjMsMjk5LjZ6IiBmaWxsPSIjRkZGRkZGIiBpZD0ibG9nbyIvPjwvc3ZnPg==" alt="Discord" title="Discord" />
                         </a>
-                        <span>Talk to other players and developers on our Discord!</span>
+                        <span>To find out how to play,<br /> connect with developers and other players on our Discord!</span>
                     </SocialBtn>
                 </SocialBtnContainer>
             </Container>
@@ -106,11 +106,11 @@ const SocialBtn = styled.div`
 
     span {
         font-family: screaming-neon;
-        font-size: 20pt;
+        font-size: 32pt;
         color: white;
-        text-shadow: 1px 3px 2px black;
+        text-shadow: 2px 3px 1px black;
         font-weight: bold;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
     }
 `;
 
